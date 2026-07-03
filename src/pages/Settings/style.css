@@ -1,0 +1,118 @@
+.settings-page {
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.settings-header p {
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.settings-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-xs);
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.setting-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.setting-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.setting-label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.setting-description {
+  margin: 2px 0 0 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.setting-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0 var(--spacing-lg);
+}
+
+.logout-section {
+  margin-top: var(--spacing-md);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 50px;
+  height: 26px;
+  background-color: var(--border-color);
+  border-radius: 13px;
+  position: relative;
+  transition: background-color var(--transition-speed);
+  cursor: pointer;
+}
+
+.toggle-switch.active {
+  background-color: var(--primary-color);
+}
+
+.toggle-handle {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform var(--transition-speed);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.active .toggle-handle {
+  transform: translateX(24px);
+}
+
+@media (max-width: 600px) {
+  .settings-page {
+    padding: var(--spacing-md);
+  }
+}

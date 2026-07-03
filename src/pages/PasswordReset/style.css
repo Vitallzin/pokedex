@@ -1,0 +1,96 @@
+.password-reset-page {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+}
+
+.password-reset-card {
+  width: 100%;
+  max-width: 560px;
+}
+
+.password-reset-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.password-reset-icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.password-reset-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.password-reset-header p {
+  color: var(--text-secondary);
+  margin: var(--spacing-sm) 0 0;
+}
+
+.password-reset-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.password-reset-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+}
+
+.password-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  color: #10b981;
+  font-weight: 600;
+  margin: 0;
+}
+
+.password-forgot-box {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.password-forgot-box h3 {
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-xs);
+  font-size: 1rem;
+}
+
+.password-forgot-box p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .password-reset-page {
+    align-items: flex-start;
+    padding: var(--spacing-md);
+  }
+
+  .password-reset-actions,
+  .password-forgot-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

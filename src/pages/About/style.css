@@ -1,0 +1,114 @@
+.about-page {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.about-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-kicker {
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-header h2 {
+  margin: 4px 0 10px;
+  color: var(--text-primary);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1;
+  font-weight: 900;
+}
+
+.about-header p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.about-section,
+.about-note {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  background-color: var(--card-bg);
+  box-shadow: 0 12px 28px rgba(42, 78, 122, 0.07);
+}
+
+.about-icon {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  background-color: rgba(77, 166, 255, 0.12);
+  color: var(--primary-color);
+}
+
+.about-section h3 {
+  margin: 0 0 var(--spacing-xs);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.about-section p,
+.about-note p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.about-section a {
+  display: inline-flex;
+  margin-top: var(--spacing-sm);
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.about-note {
+  grid-column: 1 / -1;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  box-shadow: none;
+}
+
+.about-note svg {
+  flex: 0 0 auto;
+  color: var(--primary-color);
+}
+
+[data-theme='dark'] .about-section {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 760px) {
+  .about-page {
+    padding: var(--spacing-md);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section,
+  .about-note {
+    padding: var(--spacing-md);
+  }
+}

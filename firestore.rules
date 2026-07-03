@@ -1,0 +1,70 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      function signedInAsOwner() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function validUserKeys() {
+        return request.resource.data.keys().hasOnly([
+          'uid',
+          'email',
+          'displayName',
+          'photoURL',
+          'providerIds',
+          'createdAt',
+          'updatedAt'
+        ]);
+      }
+
+      function validBaseProfile() {
+        return request.resource.data.uid == userId
+          && request.resource.data.email == request.auth.token.email
+          && request.resource.data.displayName is string
+          && request.resource.data.photoURL is string
+          && request.resource.data.providerIds is list;
+      }
+
+      allow create: if signedInAsOwner()
+        && validUserKeys()
+        && validBaseProfile()
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.updatedAt == request.time;
+
+      allow read: if signedInAsOwner();
+
+      allow update: if signedInAsOwner()
+        && validUserKeys()
+        && validBaseProfile()
+        && request.resource.data.uid == resource.data.uid
+        && request.resource.data.email == resource.data.email
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.providerIds == resource.data.providerIds
+        && request.resource.data.updatedAt == request.time;
+
+      allow delete: if false;
+
+      match /favorites/current {
+        allow read: if signedInAsOwner();
+
+        allow write: if signedInAsOwner()
+          && request.resource.data.keys().hasOnly(['items', 'updatedAt'])
+          && request.resource.data.items is list
+          && request.resource.data.items.size() <= 100
+          && request.resource.data.updatedAt == request.time;
+      }
+
+      match /teams/current {
+        allow read: if signedInAsOwner();
+
+        allow write: if signedInAsOwner()
+          && request.resource.data.keys().hasOnly(['items', 'updatedAt'])
+          && request.resource.data.items is list
+          && request.resource.data.items.size() <= 10
+          && request.resource.data.updatedAt == request.time;
+      }
+    }
+  }
+}

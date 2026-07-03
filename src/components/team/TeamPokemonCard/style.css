@@ -1,0 +1,55 @@
+.team-pokemon-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.pokemon-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.pokemon-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.pokemon-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-name {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-primary);
+}
+
+.pokemon-types {
+  display: flex;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.type-badge {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Example type colors (should be in global or variables) */
+.water { background-color: #6390F0; }
+.fire { background-color: #EE8130; }
+.grass { background-color: #7AC74C; }
+.electric { background-color: #F7D02C; }
+/* ... other types ... */
+
+.card-actions {
+  flex-shrink: 0;
+}

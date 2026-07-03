@@ -1,0 +1,94 @@
+.login-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.login-modal-header {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.login-modal-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-sm);
+}
+
+.login-modal-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.login-modal-submit {
+  margin-top: var(--spacing-md);
+}
+
+.auth-success-message {
+  margin: 0;
+  color: #10b981;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.google-auth-button {
+  margin-bottom: 0;
+}
+
+.google-auth-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  color: #4285f4;
+  font-weight: 800;
+  box-shadow: 0 0 0 1px var(--border-color);
+}
+
+.auth-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.auth-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.auth-divider span {
+  position: relative;
+  padding: 0 var(--spacing-md);
+  background: var(--bg-primary);
+}
+
+.login-modal-footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+}
+
+.toggle-auth-modal {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-left: 4px;
+}

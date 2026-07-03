@@ -1,0 +1,103 @@
+.account-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.account-details-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.account-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.avatar-edit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.large-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-color);
+  background: var(--bg-secondary);
+}
+
+.avatar-hint {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.avatar-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.account-details-divider {
+  height: 1px;
+  background: var(--border-color);
+  width: 100%;
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.password-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.password-summary h3 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.password-summary p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .account-details-container {
+    gap: 1.5rem;
+  }
+
+  .password-summary {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

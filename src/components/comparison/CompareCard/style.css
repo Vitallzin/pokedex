@@ -1,0 +1,128 @@
+.compare-card {
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 16px 36px rgba(42, 78, 122, 0.12);
+}
+
+.remove-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  z-index: 2;
+}
+
+.remove-btn:hover {
+  background-color: var(--error);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.compare-card-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.compare-card .pokemon-animation {
+  width: clamp(170px, 18vw, 230px) !important;
+  height: clamp(170px, 18vw, 230px) !important;
+  background:
+    radial-gradient(circle, rgba(77, 166, 255, 0.18), transparent 68%),
+    var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.compare-card .animated-sprite {
+  transform: scale(1.15);
+}
+
+.compare-card .pokemon-id {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.compare-card .pokemon-name {
+  margin: 0 0 var(--spacing-md);
+  color: var(--text-primary);
+  text-transform: capitalize;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1;
+  font-weight: 900;
+}
+
+.compare-card .pokemon-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compare-card-metrics {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.compare-card-metrics div {
+  padding: 12px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-secondary);
+}
+
+.compare-card-metrics span,
+.compare-card-metrics strong {
+  display: block;
+}
+
+.compare-card-metrics span {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.compare-card-metrics strong {
+  margin-top: 3px;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+[data-theme='dark'] .compare-card {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.26);
+}
+
+@media (max-width: 640px) {
+  .compare-card {
+    min-height: 0;
+  }
+
+  .compare-card-content {
+    padding: var(--spacing-md);
+  }
+
+  .compare-card-metrics {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,101 @@
+.team-slot {
+  aspect-ratio: 1;
+  border-radius: var(--border-radius-md);
+  border: 2px dashed var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed);
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-slot:not(.empty) {
+  border-style: solid;
+  border-color: var(--primary-color);
+}
+
+.team-slot.empty:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(77, 166, 255, 0.05);
+  cursor: pointer;
+}
+
+.slot-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.remove-pokemon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--error);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  transition: all var(--transition-speed);
+}
+
+.team-slot:hover .remove-pokemon {
+  opacity: 1;
+}
+
+.remove-pokemon:hover {
+  background-color: var(--error);
+  color: white;
+  transform: scale(1.1);
+}
+
+.slot-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform var(--transition-speed);
+}
+
+.team-slot:hover .slot-image {
+  transform: scale(1.1);
+}
+
+.slot-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px;
+  text-align: center;
+  text-transform: capitalize;
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+}
+
+.team-slot:hover .slot-name {
+  opacity: 1;
+}
+
+.slot-empty {
+  color: var(--border-color);
+  transition: color var(--transition-speed);
+}
+
+.team-slot.empty:hover .slot-empty {
+  color: var(--primary-color);
+}

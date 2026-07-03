@@ -1,0 +1,81 @@
+.account-menu {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  min-width: 240px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.account-menu-header {
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.account-menu-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+}
+
+.account-menu-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-menu-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.account-menu-email {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.account-menu-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 4px 0;
+}
+
+.account-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+.account-menu-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 10px 12px;
+  border-radius: var(--border-radius-md);
+  color: var(--text-primary);
+  transition: background-color var(--transition-speed);
+}
+
+.account-menu-link:hover {
+  background-color: var(--bg-secondary);
+}
+
+.account-menu-logout {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 12px 16px;
+  width: 100%;
+  color: var(--error);
+  font-weight: 600;
+  transition: background-color var(--transition-speed);
+}
+
+.account-menu-logout:hover {
+  background-color: rgba(220, 53, 69, 0.05);
+}

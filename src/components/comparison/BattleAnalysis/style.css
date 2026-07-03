@@ -1,0 +1,157 @@
+.battle-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.verdict-card {
+  padding: var(--spacing-xl);
+  border: 1px solid var(--border-color);
+  border-left: 6px solid var(--success);
+  border-radius: var(--border-radius-lg);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--card-bg) 100%);
+}
+
+.verdict-card.draw {
+  border-left-color: var(--warning);
+}
+
+.verdict-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.zap-icon {
+  flex: 0 0 auto;
+  color: var(--warning);
+  filter: drop-shadow(0 0 6px rgba(255, 193, 7, 0.4));
+}
+
+.verdict-title h4 {
+  margin: 0 0 6px;
+  color: var(--text-primary);
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.verdict-title p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.verdict-title strong,
+.p-name {
+  text-transform: capitalize;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+  gap: var(--spacing-md);
+}
+
+.analysis-box {
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  background-color: var(--bg-secondary);
+}
+
+.analysis-box.full-width {
+  grid-column: auto;
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: 10px;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.box-header h5 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.advantage-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 10px 0;
+}
+
+.p-name {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.multiplier {
+  min-width: 86px;
+  padding: 5px 10px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.multiplier.x2,
+.multiplier.x4 {
+  background-color: rgba(40, 167, 69, 0.12);
+  color: var(--success);
+}
+
+.multiplier.x0_5,
+.multiplier.x0_25 {
+  background-color: rgba(220, 53, 69, 0.12);
+  color: var(--error);
+}
+
+.multiplier.x0 {
+  background-color: #333;
+  color: white;
+}
+
+.multiplier.x1 {
+  background-color: var(--card-bg);
+  color: var(--text-secondary);
+}
+
+.box-content p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.summary-text p {
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verdict-header {
+    align-items: flex-start;
+  }
+}

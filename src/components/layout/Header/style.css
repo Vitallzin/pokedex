@@ -1,0 +1,146 @@
+.header {
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(18px);
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.icon-button {
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color var(--transition-speed);
+}
+
+.icon-button:hover {
+  background-color: var(--bg-secondary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 6px 12px;
+  border-radius: 30px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background-color: var(--bg-secondary);
+  object-fit: cover;
+}
+
+.user-name-desktop {
+  font-weight: 600;
+}
+
+/* Login Link */
+.login-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 8px 16px;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  transition: transform var(--transition-speed);
+}
+
+.login-link:hover {
+  transform: scale(1.05);
+}
+
+.avatar-placeholder {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-loading-placeholder {
+  width: 100px;
+  height: 36px;
+  background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--border-color) 50%, var(--bg-secondary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 30px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 768px) {
+  .user-name-desktop {
+    display: none;
+  }
+
+  .user-profile-summary {
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .login-link {
+    padding: 8px;
+  }
+
+  .login-link span {
+    display: none;
+  }
+  
+  .header {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+[data-theme='dark'] .header {
+  background-color: rgba(30, 30, 30, 0.88);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 78px;
+    padding: 0 40px;
+  }
+
+  .header-left {
+    display: none;
+  }
+
+  .header-title h1 {
+    font-size: 1.8rem;
+  }
+}

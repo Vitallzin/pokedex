@@ -1,0 +1,111 @@
+.teams-page {
+  padding: var(--spacing-lg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.teams-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.teams-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 2rem;
+}
+
+.teams-header p {
+  margin: 4px 0 0 0;
+  color: var(--text-secondary);
+}
+
+.add-team-card {
+  margin-bottom: var(--spacing-xl);
+  max-width: 500px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.form-header h3 {
+  margin: 0;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl) * 2;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.empty-icon {
+  width: 88px;
+  height: 88px;
+  margin-bottom: var(--spacing-sm);
+  border-radius: 50%;
+  background: var(--card-bg);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.delete-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.delete-modal-content {
+  padding: var(--spacing-md) 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .teams-page {
+    padding: var(--spacing-md);
+  }
+  
+  .teams-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .teams-grid {
+    grid-template-columns: 1fr;
+  }
+}

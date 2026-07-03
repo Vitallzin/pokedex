@@ -1,0 +1,77 @@
+.autocomplete-container {
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0 12px;
+  transition: all var(--transition-speed);
+}
+
+.autocomplete-wrapper:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(77, 166, 255, 0.1);
+}
+
+.autocomplete-icon {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.autocomplete-field {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.suggestion-item:hover {
+  background-color: var(--bg-secondary);
+}
+
+.suggestion-id {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: rgba(77, 166, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.suggestion-name {
+  text-transform: capitalize;
+  color: var(--text-primary);
+  font-weight: 500;
+}

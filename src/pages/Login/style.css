@@ -1,0 +1,134 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  padding: var(--spacing-md);
+  background-image: radial-gradient(var(--primary-color) 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  background-color: var(--bg-secondary);
+}
+
+.login-card {
+  max-width: 450px;
+  width: 100%;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.login-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: var(--spacing-md);
+  object-fit: contain;
+}
+
+.toggle-auth {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  text-decoration: underline;
+}
+
+.toggle-auth:hover {
+  filter: brightness(1.2);
+}
+
+.login-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.75rem;
+}
+
+.login-header p {
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.auth-success-message {
+  margin: 0;
+  color: #10b981;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.google-auth-button {
+  margin-bottom: var(--spacing-lg);
+}
+
+.google-auth-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  color: #4285f4;
+  font-weight: 800;
+  box-shadow: 0 0 0 1px var(--border-color);
+}
+
+.auth-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.auth-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.auth-divider span {
+  position: relative;
+  padding: 0 var(--spacing-md);
+  background: var(--bg-primary);
+}
+
+.login-footer {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-lg);
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 0;
+    background-color: var(--bg-primary);
+  }
+
+  .login-card {
+    border-radius: 0;
+    border: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
